@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 30, 2016 12:36:27 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.domain.hibernate.Message" table="message" catalog="messagerepository" optimistic-lock="version">
+        <meta attribute ="class-description"> This class contains the Messages information </meta>
+        <id name="id" type="java.lang.Short" column="id">
+           <generator class="native" />
+        </id>
+        <property name="message" type="java.lang.String">
+            <column name="message" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>
