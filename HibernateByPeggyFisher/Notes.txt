@@ -77,3 +77,26 @@ Configuration conf = new Configuration().configure();
 to 
 Configuration conf = new Configuration().configure("/hibernate/hibernate.cfg.xml");
 where: hibernate.cfg.xml is located under src/main/resources/hibernate/hibernate.cfg.xml
+
+
+============================================================================================================
+
+Error:
+
+org.hibernate.MappingException: Unknown entity: com.domain.hibernate.Employee
+	at org.hibernate.internal.SessionFactoryImpl.getEntityPersister(SessionFactoryImpl.java:1095)
+	at org.hibernate.internal.SessionImpl.getEntityPersister(SessionImpl.java:1439)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:116)
+	at org.hibernate.event.internal.DefaultSaveOrUpdateEventListener.saveWithGeneratedOrRequestedId(DefaultSaveOrUpdateEventListener.java:209)
+	at org.hibernate.event.internal.DefaultSaveEventListener.saveWithGeneratedOrRequestedId(DefaultSaveEventListener.java:55)
+	at org.hibernate.event.internal.DefaultSaveOrUpdateEventListener.entityIsTransient(DefaultSaveOrUpdateEventListener.java:194)
+	at org.hibernate.event.internal.DefaultSaveEventListener.performSaveOrUpdate(DefaultSaveEventListener.java:49)
+	at org.hibernate.event.internal.DefaultSaveOrUpdateEventListener.onSaveOrUpdate(DefaultSaveOrUpdateEventListener.java:90)
+	at org.hibernate.internal.SessionImpl.fireSave(SessionImpl.java:711)
+	at org.hibernate.internal.SessionImpl.save(SessionImpl.java:703)
+	at org.hibernate.internal.SessionImpl.save(SessionImpl.java:698)
+	at com.HibernateExampleApp.addEmployee(HibernateExampleApp.java:79)
+	at com.HibernateExampleApp.main(HibernateExampleApp.java:41)
+	
+	
+============================================================================================================
