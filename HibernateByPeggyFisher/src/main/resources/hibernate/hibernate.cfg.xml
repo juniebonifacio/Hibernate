@@ -12,7 +12,10 @@
     <property name="hibernate.current_session_context_class">thread</property>
     <property name="hibernate.query.factory_class">org.hibernate.hql.internal.classic.ClassicQueryTranslatorFactory</property>
   
-    <mapping resource="hibernate/message.hbm.xml"/>
+    <!--mapping resource="hibernate/message.hbm.xml"/-->
+    <mapping resource="hibernate/Message.hbm.xml"/>
+    <mapping resource="hibernate/Employee.hbm.xml"/>
+    <!-- mapping resource="hibernate/Phone.hbm.xml"/-->
   
   </session-factory>
 </hibernate-configuration>
